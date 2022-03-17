@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+
+
+   <head>
+     <title>hw1</title>
+
+      <style> 
+         body {
+            background: #dddddd;
+         }
+
+         #canvas {
+            margin: 10px;
+            padding: 10px;
+            background: white;
+            border: thin inset black;
+            /*width: 500px;  
+            height: 800px; */
+         }
+      </style>
+    </head>
+
+  <body>
+    <canvas id=canvas width="500" height="800">
+      Canvas not supported
+      
+    </canvas>
+      
+
+    <script>
+      var canvas = document.getElementById('canvas'),
+      context = canvas.getContext('2d');
+
+      context.lineWidth = 0;
+      context.font = '15px Helvetica';
+      context.strokeRect(15, 5, 475, 40);
+      context.fillText('앱 및 게임을 검색하세요', 60, 29);
+
+      context.lineWidth = 1;
+      context.beginPath();
+      context.moveTo(20, 15);
+      context.lineTo(40, 15);
+      context.stroke();
+
+      context.beginPath();
+      context.moveTo(20, 25);
+      context.lineTo(40, 25);
+      context.stroke();
+
+      context.beginPath();
+      context.moveTo(20, 35);
+      context.lineTo(40, 35);
+      context.stroke();
+
+      endPoints = [
+       { x: 400, y: 15 },
+       { x: 430, y: 35 },
+        ],
+        
+      controlPoints = [
+        { x: 400, y: 35 },
+        { x: 430, y: 15 },
+        ];
+       
+      drawEndPoints();
+      drawBezierCurve();
+
+
+      context.beginPath();
+      context.arc(460, 26, 15, 0, Math.PI*2);
+      context.stroke();
+
+      context.strokeText('추천', 40, 80);
+      context.strokeText('인기차트', 130, 80);
+      context.strokeText('신규', 240, 80);
+      context.strokeText('프리미엄', 320, 80);
+      context.strokeText('카테고리', 420, 80);
+
+      context.lineWidth = 0;
+      context.beginPath();
+      context.moveTo(15, 100);
+      context.lineTo(490, 100);
+      context.stroke();
+
+      context.strokeRect(30, 130, 200, 80);
+
+      image11 = new Image();
+      image11.src = './새폴더/데카.jpg';
+    
+      image11.onload = function(e) {
+        context.drawImage(image11, 15, 125, 220, 90);
+      };
+
+
+      context.strokeRect(265, 130, 200, 80);
+
+      context.font = '20px Helvetica';
+      context.strokeText('추천 게임 둘러보기', 16, 250);
+
+      context.font = '10px Helvetica';
+        context.strokeText('클릭또는휠로 이동가능', 350, 250);
+
+      context.strokeRect(15, 280, 300, 150);
+      image12 = new Image();
+      image12.src = './새폴더/상상.jpg';
+    
+      image12.onload = function(e) {
+        context.drawImage(image12, 11, 270, 320, 170);
+      };
+      
+      context.strokeRect(350, 280, 300, 150);
+      
+      context.strokeRect(15, 450, 40, 40);
+      context.strokeRect(350, 450, 40, 40);
+
+      context.strokeText('광고 추천', 16, 530);
+
+      context.strokeRect(15, 550, 300, 150);
+      image13 = new Image();
+      image13.src = './새폴더/검수.jpg';
+    
+      image13.onload = function(e) {
+        context.drawImage(image13, 13, 540, 320, 170);
+      };
+
+      context.strokeRect(350, 550, 300, 150);
+
+      context.lineWidth = 1;
+      context.beginPath();
+      context.moveTo(15, 730);
+      context.lineTo(490, 730);
+      context.stroke();
+
+      roundedRect(context, 30, 740, 50, 50, 3);
+
+      context.beginPath();  
+      context.moveTo(140,765); 
+      context.lineTo(155 ,735); 
+      context.lineTo(185 ,735); 
+      context.lineTo(200 ,765);  
+      context.lineTo(185 ,795); 
+      context.lineTo(155 ,795); 
+      context.lineTo(140 ,765); 
+      context.stroke(); 
+
+         
+
+
+      roundedRect(context, 250, 740, 100, 50, 10);
+
+      context.beginPath();  
+      context.moveTo(400,790); 
+      context.lineTo(430 ,735); 
+      context.lineTo(460 ,790); 
+      context.lineTo(400 ,790);  
+      context.stroke(); 
+
+
+      context.canvas.onclick = function (e) {
+        context.clearRect(0, 0, canvas.width, canvas.height);
+        
+         context.font = '10px Helvetica';
+        context.strokeText('클릭또는휠로 이동가능', 10, 10);
+
+        context.font = '20px Helvetica';
+
+        context.strokeText('추천', 50, 50);
+        context.strokeText('인기차트', 140, 50);
+        context.strokeText('카테고리', 270, 50);
+        context.strokeText('에디터 추천', 380, 50);
+
+        context.lineWidth = 1;
+        context.beginPath();
+        context.moveTo(15,70);
+        context.lineTo(490, 70);
+        context.stroke();
+
+        context.strokeRect(25, 100, 120, 120);
+        image10 = new Image();
+        image10.src = './새폴더/뉴러.jpg';
+    
+        image10.onload = function(e) {
+          context.drawImage(image10, 15, 90, 140, 140);
+        };
+
+        context.strokeRect(170, 100, 120, 120);
+        context.strokeRect(315, 100, 120, 120);
+
+        context.strokeText('왓챠 추천 콘텐츠', 20, 260);
+        const temppos3 = xyPosition(20,70);
+        temppos3.ychange(220);
+        temppos3.xchange(140);
+        temppos3.xchange(140);
+        temppos3.xchange(140);
+
+        image7 = new Image();
+        image7.src = './새폴더/백두산.jpg';
+    
+        image7.onload = function(e) {
+          context.drawImage(image7, 15, 290, 120, 225);
+        };
+
+        image8 = new Image();
+        image8.src = './새폴더/해리포터.jpg';
+
+        image8.onload = function(e) {
+          context.drawImage(image8, 155, 290, 120, 225);
+        };
+
+        image9 = new Image();
+        image9.src = './새폴더/나이브스.jpg';
+       
+        image9.onload = function(e) {
+          context.drawImage(image9, 295, 290, 120, 225);
+        };
+        
+
+
+        /*context.strokeRect(25, 280, 100, 200);
+        context.strokeRect(140, 280, 100, 200);
+        context.strokeRect(255, 280, 100, 200);
+        context.strokeRect(370, 280, 100, 200);*/
+
+        context.strokeRect(25, 530, 60, 60);
+        context.font = '40px Helvetica';
+        context.strokeText('W', 35, 570);
+        context.font = '20px Helvetica';
+        context.strokeText('왓챠', 110, 560);
+        context.strokeRect(370, 530, 50, 30);
+        context.font = '15px Helvetica';
+        context.strokeText('설치', 380, 550);
+
+        context.strokeRect(25, 600, 400, 120);
+
+        context.lineWidth = 1;
+        context.beginPath();
+        context.moveTo(15, 730);
+        context.lineTo(490, 730);
+        context.stroke();
+
+        roundedRect(context, 30, 740, 50, 50, 3);
+
+        context.beginPath();  
+        context.moveTo(140,765); 
+        context.lineTo(155 ,735); 
+        context.lineTo(185 ,735); 
+        context.lineTo(200 ,765);  
+        context.lineTo(185 ,795); 
+        context.lineTo(155 ,795); 
+        context.lineTo(140 ,765); 
+        context.stroke(); 
+
+           
+
+
+        roundedRect(context, 250, 740, 100, 50, 10);
+
+        context.beginPath();  
+        context.moveTo(400,790); 
+        context.lineTo(430 ,735); 
+        context.lineTo(460 ,790); 
+        context.lineTo(400 ,790);  
+        context.stroke(); 
+       
+      };
+
+    
+
+      context.canvas.onwheel = function (e) {
+        context.clearRect(0, 0, canvas.width, canvas.height);
+        
+        context.font = '10px Helvetica';
+        context.strokeText('클릭또는휠로 이동가능', 350, 700);
+
+        context.lineWidth = 0;
+        context.font = '15px Helvetica';
+        context.strokeRect(15, 5, 475, 40);
+        context.fillText('영화와 TV 프로그램 검색', 60, 29);
+
+        context.lineWidth = 1;
+        context.beginPath();
+        context.moveTo(20, 15);
+        context.lineTo(40, 15);
+        context.stroke();
+
+        context.beginPath();
+        context.moveTo(20, 25);
+        context.lineTo(40, 25);
+        context.stroke();
+
+        context.beginPath();
+        context.moveTo(20, 35);
+        context.lineTo(40, 35);
+        context.stroke();
+
+        context.beginPath();
+        context.arc(460, 26, 15, 0, Math.PI*2);
+        context.stroke();
+
+        endPoints = [
+       { x: 400, y: 15 },
+       { x: 430, y: 35 },
+        ],
+        
+      controlPoints = [
+        { x: 400, y: 35 },
+        { x: 430, y: 15 },
+        ];
+       
+      drawEndPoints();
+      drawBezierCurve();
+
+        context.strokeText('추천', 40, 80);
+        context.strokeText('최다 판매', 130, 80);
+        context.strokeText('영화 신작', 240, 80);
+        context.strokeText('장르', 340, 80);
+        context.strokeText('키즈', 420, 80);
+
+
+        context.lineWidth = 0;
+        context.beginPath();
+        context.moveTo(15, 100);
+        context.lineTo(490, 100);
+        context.stroke();
+
+        context.font = '20px Helvetica';
+        context.fillText('극장동시 상영작', 20, 130);
+
+        const temppos1 = xyPosition(25,70);
+        temppos1.ychange(100);
+        temppos1.xchange(150);
+        temppos1.xchange(150);
+
+
+       context.font = '20px Helvetica';
+        context.fillText('최신영화 전용관', 20, 420);
+
+        const temppos2 = xyPosition(10,360);
+        temppos2.ychange(100);
+        temppos2.xchange(150);
+        temppos2.xchange(150);
+        image1 = new Image();
+
+
+
+        image1.src = './새폴더/체르노빌.jpg';
+        image1.onload = function(e) {
+         context.drawImage(image1, 17, 169, 130,225);
+       };
+        
+        image2 = new Image();
+        image2.src = './새폴더/스매시앤.jpg';
+          image2.onload = function(e) {
+           context.drawImage(image2, 167, 169, 130,225);
+        };
+
+        image3 = new Image();
+        image3.src = './새폴더/마피아.jpg';
+        image3.onload = function(e) {
+         context.drawImage(image3, 317, 169, 130,225);
+       };
+
+       image4 = new Image();
+       image4.src = './새폴더/나쁜녀석들.jpg';
+        image4.onload = function(e) {
+         context.drawImage(image4, 7, 458, 130,225);
+       };
+
+       image5= new Image();
+       image5.src = './새폴더/쓰리썸씽.jpg';
+        image5.onload = function(e) {
+         context.drawImage(image5, 153, 458, 130,225);
+       };
+
+       image6 = new Image();
+       image6.src = './새폴더/도둑들.jpg';
+        image6.onload = function(e) {
+         context.drawImage(image6, 298, 458, 130,225);
+       };
+
+
+        context.lineWidth = 1;
+        context.beginPath();
+        context.moveTo(15, 730);
+        context.lineTo(490, 730);
+        context.stroke();
+
+        roundedRect(context, 30, 740, 50, 50, 3);
+
+      context.beginPath();  
+      context.moveTo(140,765); 
+      context.lineTo(155 ,735); 
+      context.lineTo(185 ,735); 
+      context.lineTo(200 ,765);  
+      context.lineTo(185 ,795); 
+      context.lineTo(155 ,795); 
+      context.lineTo(140 ,765); 
+      context.stroke(); 
+
+         
+
+
+      roundedRect(context, 250, 740, 100, 50, 10);
+
+      context.beginPath();  
+      context.moveTo(400,790); 
+      context.lineTo(430 ,735); 
+      context.lineTo(460 ,790); 
+      context.lineTo(400 ,790);  
+      context.stroke(); 
+        
+
+
+      };
+
+     function xyPosition (xpos, ypos) {
+          let pos = Object.create(xyPosition.prototype);
+          pos.xpos = xpos;
+          pos.ypos = ypos;
+          temp=0;
+                   
+          return pos;
+      }
+      
+      xyPosition.prototype.xchange = function(plusx){
+            this.xpos += plusx;
+            context.strokeRect(this.xpos, this.ypos, 110, 220);
+            context.font = '10px Helvetica';
+            context.fillText('선택', this.xpos, this.ypos-10);
+            context.beginPath();
+            context.arc(this.xpos+35, this.ypos-15, 7, 0, Math.PI*2);
+            context.stroke();
+            
+            if(temp==0){
+                context.fill();
+            }
+            temp++;
+            
+                 
+      };
+          
+      xyPosition.prototype.ychange = function(plusy){
+              this.ypos += plusy;
+              context.strokeRect(this.xpos, this.ypos, 110, 220);
+              context.font = '10px Helvetica';
+              context.fillText('선택', this.xpos, this.ypos-10);
+              context.beginPath();
+            context.arc(this.xpos+35, this.ypos-15, 7, 0, Math.PI*2);
+            context.stroke();
+            
+            if(temp==0){
+              context.fill();
+            }
+            temp++;
+            
+            
+      };
+
+      window.addEventListener('keydown',check);
+      
+     function check(e) {
+          var code = e.keyCode;
+          //Up arrow pressed
+          if (code == 48)
+            alert("프로그램이 멈춥니다");
+
+      }
+
+      function roundedRect(context, x, y, width, height, radius) {
+        context.beginPath();
+        context.moveTo(x, y + radius);
+        context.lineTo(x, y + height - radius);
+        context.arcTo(x, y + height, x + radius, y + height, radius);
+        context.lineTo(x + width - radius, y + height);
+        context.arcTo(x + width, y + height, x + width, y + height-radius, radius);
+        context.lineTo(x + width, y + radius);
+        context.arcTo(x + width, y, x + width - radius, y, radius);
+        context.lineTo(x + radius, y);
+        context.arcTo(x, y, x, y + radius, radius);
+        context.stroke();
+      }
+
+
+
+
+
+      function drawBezierCurve() {
+         context.strokeStyle = 'black';
+         
+
+         context.beginPath();
+         context.moveTo(endPoints[0].x, endPoints[0].y);
+         context.bezierCurveTo(controlPoints[0].x, controlPoints[0].y,
+                               controlPoints[1].x, controlPoints[1].y,
+                               endPoints[1].x, endPoints[1].y);
+         context.stroke();
+      }
+
+      function drawEndPoints() {
+         context.strokeStyle = 'blue';
+         context.fillStyle = 'black';
+
+         endPoints.forEach( function (point) {
+            context.beginPath();
+            context.arc(point.x, point.y, 5, 0, Math.PI*2, false);
+            context.stroke();
+            context.fill();
+         });
+      }
+
+
+    
+    </script>
+
+  </body>
+</html>

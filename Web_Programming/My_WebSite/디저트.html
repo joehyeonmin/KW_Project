@@ -1,0 +1,200 @@
+<!Doctype html>
+<html>
+<head>
+	<title>디저트</title>
+	<style>
+		
+		body {
+			background : #A9F5D0;
+		}
+
+
+		h1{
+			text-align: center;
+			color:black;
+		}
+		
+		h2{
+			margin: 10px 10px 10px 20px;
+		}	
+
+		a{
+			color: black;
+			text-decoration: none;
+
+		}
+
+		a:hover{
+			color: pink;
+		}
+
+		section.courses{
+			float: left;
+			width: 500px;
+			border-right: 1px solid #eeeeee;
+		}
+
+		section.map{
+			float: right;
+			width: 400px;
+			
+		}
+
+		article{
+			clear: both;
+			overflow: auto;
+			width: 80%;
+
+		}
+
+		figure{
+			float: left;
+			width: 330px;
+			height: 155px;
+			padding: 5px;
+			margin: 20px;
+			border: 1px solid #eeeeee;
+		} 
+
+		figcaption{
+			font-size: 90%;
+			text-align: left;
+		}
+
+		aside{
+			width: 500px;
+			height: 683px;
+			float: left;
+			padding: 
+		}
+
+		aside section a{
+			display: block;
+			padding: 10px;
+			border-bottom: 1px solid #eeeeee;
+		}
+
+		.wrapper{
+			width: 1050px;
+			margin: 20px auto 20px auto;
+			border:2px solid #000000;
+			background-color: #ffffff;
+		}
+
+		footer{
+			text-align: right;
+		}
+
+		.build{
+			padding: 10px;
+		}
+		
+		.color1{
+			background: #F3F781;
+		}
+
+
+		</style>
+	
+		<link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+
+		<script>
+		function query() {
+			var ret = confirm("리뷰사이트로 이동하시겠습니까?");
+			return ret; 
+		}
+		
+		function noAction(e) {
+			e.preventDefault(); 
+		}
+	</script>
+
+<body>
+	
+
+	<div class="wrapper">
+		<header class="color1">
+			<h1 style="font-family: 'Shadows Into Light', cursive;">Dessert</h1><hr>
+		</header>
+
+		<section class="courses">
+			<h2>빽다방</h2>
+			<article>
+				<figure>
+			
+					<img src="빽다방크림치즈갈릭브레드.jpg" width="150" height="150">
+					<figcation>크림치즈갈릭 2,500</figcation>
+				</figure>		
+				<figure>
+					<img src="빽다방크로칸슈.jpg" width="150" height="150">
+					<figcation>크로칸슈 2,000</figcation>
+				
+				</figure>
+			
+
+				<figure>
+					<img src="빽다방베이컨.jpg" width="150" height="150">
+					<figcation>에그베이컨토스트 3,500</figcation>
+				</figure>
+			
+				
+			</article><hr>
+
+			<h2>고디바(체인점)</h2>
+			<article>
+				<figure>
+					<img src="고디바초콜렛.jpg" width="150" height="150">
+					<figcation>개당 3,400 / 3,900</figcation>
+				</figure>
+				<figure>
+					<img src="고디바콘.jpg" width="150" height="150">
+					<figcation>더블 초콜릿 6,300</figcation>
+				</figure>
+				<figure>
+					<img src="고디바빙수.jpg" width="150" height="150">
+					<figcation>다크초콜릿빙수 16,000</figcation>
+				</figure>
+			</article>
+		
+		</section>
+			
+			<aside>
+				<section class="map">
+					<h2>지도</h2>
+
+					<img src="빽다방지도.jpg" width="400" height="300">
+					<a href="https://map.naver.com/v5/search/%EB%B9%BD%EB%8B%A4%EB%B0%A9%EC%8B%A0%EC%82%AC%EC%82%AC%EA%B1%B0%EB%A6%AC%EC%A0%90/place/1798709339?c=14139250.1384889,4511249.2105038,15,0,0,0,dh"><input type="button" value="위치(상세정보)"></a>
+					
+					<a href="https://www.youtube.com/watch?v=bQitfrHVsk4" onclick="return query()"><img src="리뷰.jpg"  class="align-right"></a>
+					<img src="예약.jpg" class="build" onclick="alert('예약이 불가능합니다ㅠ')">
+					<p>나는 Great ^-^</p>
+					<p>한줄평 : 유명 브랜드 빵집보다 빵이 맛있고 큼 </p>
+				
+
+				</section>
+			</aside>
+			<aside>
+				<section class="map">
+					<h2>지도</h2>
+					
+					<img src="고디바지도.jpg" width="400" height="300">
+					<a href="https://map.naver.com/v5/search/%EA%B3%A0%EB%94%94%EB%B0%94/place/31328453?c=14139204.4479923,4511979.8447315,14,0,0,0,dh"><input type="button" value="위치(상세정보)"></a>
+					<a href="https://www.mangoplate.com/restaurants/U9s82UKSZ1" onclick="return query()"><img src="리뷰.jpg"  class="align-right"></a>
+					<img src="예약.jpg" class="build" onclick="alert('예약이 불가능합니다ㅠ')">
+					<p>나는 Bad -_-</p>
+					<p>한줄평 : 가격이 사악 </p>
+					
+
+				</section>
+			</aside>
+			
+			<footer>
+				<a href="메인.html"><input type="button" value="메인페이지로 이동"></a>
+			</footer>
+
+	</div>
+
+
+</body>
+
+</html>

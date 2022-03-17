@@ -1,0 +1,200 @@
+<!Doctype html>
+<html>
+<head>
+	<title>양식</title>
+	<style>
+		
+		body {
+			background : #A9F5D0;
+		}
+
+
+		h1{
+			text-align: center;
+			color:black;
+		}
+		
+		h2{
+			margin: 10px 10px 10px 20px;
+		}	
+
+		a{
+			color: black;
+			text-decoration: none;
+
+		}
+
+		a:hover{
+			color: pink;
+		}
+
+		section.courses{
+			float: left;
+			width: 500px;
+			border-right: 1px solid #eeeeee;
+		}
+
+		section.map{
+			float: right;
+			width: 400px;
+			
+		}
+
+		article{
+			clear: both;
+			overflow: auto;
+			width: 80%;
+
+		}
+
+		figure{
+			float: left;
+			width: 330px;
+			height: 155px;
+			padding: 5px;
+			margin: 20px;
+			border: 1px solid #eeeeee;
+		} 
+
+		figcaption{
+			font-size: 90%;
+			text-align: left;
+		}
+
+		aside{
+			width: 500px;
+			height: 683px;
+			float: left;
+			padding: 
+		}
+
+		aside section a{
+			display: block;
+			padding: 10px;
+			border-bottom: 1px solid #eeeeee;
+		}
+
+		.wrapper{
+			width: 1050px;
+			margin: 20px auto 20px auto;
+			border:2px solid #000000;
+			background-color: #ffffff;
+		}
+
+		footer{
+			text-align: right;
+		}
+
+		.build{
+			padding: 10px;
+		}
+		
+		.color1{
+			background: #F3F781;
+		}
+
+
+	</style>
+
+	<script>
+		function query() {
+			var ret = confirm("리뷰사이트로 이동하시겠습니까?");
+			return ret; 
+		}
+		
+		function noAction(e) {
+			e.preventDefault(); 
+		}
+	</script>
+
+	<link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+
+<body>
+	
+
+	<div class="wrapper">
+		<header class="color1">
+			<h1 style="font-family: 'Shadows Into Light', cursive;">Western restaurant</h1><hr>
+		</header>
+
+		<section class="courses">
+			<h2>448돈까스(체인점)</h2>
+			<article>
+				<figure>
+			
+					<img src="448돈까스.jpg" width="150" height="150">
+					<figcation>448돈까스 8,500</figcation>
+				</figure>		
+				<figure>
+					<img src="448돈까스크림.jpg" width="150" height="150">
+					<figcation>매콤크림 10,500</figcation>
+				
+				</figure>
+			
+
+				<figure>
+					<img src="448돈까스데미.jpg" width="150" height="150">
+					<figcation>데미그라스 9,500</figcation>
+				</figure>
+			
+				
+			</article><hr>
+
+			<h2>아빠곰수제돈까스</h2>
+			<article>
+				<figure>
+					<img src="아빠곰수제돈까스.jpg" width="150" height="150">
+					<figcation>모듬까스 10,000</figcation>
+				</figure>
+				<figure>
+					<img src="아빠곰치즈.jpg" width="150" height="150">
+					<figcation>치즈까스 8,500</figcation>
+				</figure>
+				<figure>
+					<img src="아빠곰히레.jpg" width="150" height="150">
+					<figcation>히레까스 8,000</figcation>
+				</figure>
+			</article>
+		
+		</section>
+			
+			<aside>
+				<section class="map">
+					<h2>지도</h2>
+
+					<img src="448돈까스지도.jpg" width="400" height="300">
+					<a href="https://map.naver.com/v5/search/448%EB%8F%88%EA%B9%8C%EC%8A%A4/place/78127874?c=14122252.1483129,4505425.3695560,14,0,0,0,dh"><input type="button" value="위치(상세정보)"></a>
+					
+					<a href="https://www.mangoplate.com/restaurants/DS7aRoPoCdFJ" onclick="return query()"><img src="리뷰.jpg"  class="align-right"></a>
+					<img src="예약.jpg" class="build" onclick="alert('예약이 불가능합니다ㅠ')">
+					<p>나는 So-So</p>
+					<p>한줄평 : 가격이 오름ㅠ  맛은 good</p>
+				
+
+				</section>
+			</aside>
+			<aside>
+				<section class="map">
+					<h2>지도</h2>
+					
+					<img src="아빠곰지도.jpg" width="400" height="300">
+					<a href="https://map.naver.com/v5/search/%EC%95%84%EB%B9%A0%EA%B3%B0%EC%88%98%EC%A0%9C%EB%8F%88%EA%B9%8C%EC%8A%A4/place/34345268?c=14140064.3645605,4509249.3110453,17,0,0,0,dh"><input type="button" value="위치(상세정보)"></a>
+					<a href="https://www.mangoplate.com/restaurants/q6MU3rHTzxTx" onclick="return query()"><img src="리뷰.jpg"  class="align-right"></a>
+					<img src="예약.jpg" class="build" onclick="alert('예약이 불가능합니다ㅠ')">
+					<p>나는 Great ^-^</p>
+					<p>한줄평 : 가격과 맛 둘다 Best! </p>
+					
+
+				</section>
+			</aside>
+			
+			<footer>
+				<a href="메인.html"><input type="button" value="메인페이지로 이동"></a>
+			</footer>
+
+	</div>
+
+
+</body>
+
+</html>

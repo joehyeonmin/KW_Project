@@ -1,0 +1,200 @@
+<!Doctype html>
+<html>
+<head>
+	<title>일식</title>
+	<style>
+		
+		body {
+			background : #A9F5D0;
+		}
+
+		
+		h1{
+			text-align: center;
+			color:black;
+		}
+		
+		h2{
+			margin: 10px 10px 10px 20px;
+		}	
+
+		a{
+			color: black;
+			text-decoration: none;
+
+		}
+
+		a:hover{
+			color: pink;
+		}
+
+		section.courses{
+			float: left;
+			width: 500px;
+			border-right: 1px solid #eeeeee;
+		}
+
+		section.map{
+			float: right;
+			width: 400px;
+			
+		}
+
+		article{
+			clear: both;
+			overflow: auto;
+			width: 80%;
+
+		}
+
+		figure{
+			float: left;
+			width: 330px;
+			height: 155px;
+			padding: 5px;
+			margin: 20px;
+			border: 1px solid #eeeeee;
+		} 
+
+		figcaption{
+			font-size: 90%;
+			text-align: left;
+		}
+
+		aside{
+			width: 500px;
+			height: 683px;
+			float: left;
+			padding: 
+		}
+
+		aside section a{
+			display: block;
+			padding: 10px;
+			border-bottom: 1px solid #eeeeee;
+		}
+
+		.wrapper{
+			width: 1050px;
+			margin: 20px auto 20px auto;
+			border:2px solid #000000;
+			background-color: #ffffff;
+		}
+
+		footer{
+			text-align: right;
+		}
+	
+		.build{
+			padding: 10px;
+		}
+
+		.color1{
+			background: #F3F781;
+		}
+
+
+		</style>
+	
+		<link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+
+		<script>
+		function query() {
+			var ret = confirm("리뷰사이트로 이동하시겠습니까?");
+			return ret; 
+		}
+		
+		function noAction(e) {
+			e.preventDefault(); 
+		}
+	</script>
+
+<body>
+	
+
+	<div class="wrapper">
+		<header class="color1">
+			<h1 style="font-family: 'Shadows Into Light', cursive;">Japanese restaurant</h1><hr>
+		</header>
+
+		<section class="courses">
+			<h2>가야가야라멘</h2>
+			<article>
+				<figure>
+			
+					<img src="가야가야돈코츠.jpg" width="150" height="150">
+					<figcation>돈코츠라멘 7,000</figcation>
+				</figure>		
+				<figure>
+					<img src="가야가야교카이.jpg" width="150" height="150">
+					<figcation>돈코츠교카이 10,000</figcation>
+				
+				</figure>
+			
+
+				<figure>
+					<img src="가야가야미소.jpg" width="150" height="150">
+					<figcation>돈코츠미소차슈 7,500</figcation>
+				</figure>
+			
+				
+			</article><hr>
+
+			<h2>텐동요츠야</h2>
+			<article>
+				<figure>
+					<img src="텐동요츠야스페셜.jpg" width="150" height="150">
+					<figcation>스페셜텐동 15,000</figcation>
+				</figure>
+				<figure>
+					<img src="텐동요츠야텐동.jpg" width="150" height="150">
+					<figcation>텐동요츠야 8,000</figcation>
+				</figure>
+				<figure>
+					<img src="텐동요츠야토마토.jpg" width="150" height="150">
+					<figcation>유자토마토 1,500</figcation>
+				</figure>
+			</article>
+		
+		</section>
+			
+			<aside>
+				<section class="map">
+					<h2>지도</h2>
+
+					<img src="가야가야지도.jpg" width="400" height="300">
+					<a href="https://map.naver.com/v5/search/%EA%B0%80%EC%95%BC%EA%B0%80%EC%95%BC%EB%9D%BC%EB%A9%98/place/13507856?c=14130564.6751390,4517215.7811690,14,0,0,0,dh"><input type="button" value="위치(상세정보)"></a>
+					
+					<a href="https://www.mangoplate.com/restaurants/RPwPuH5ncL" onclick="return query()"><img src="리뷰.jpg"  class="align-right"></a>
+					<img src="예약.jpg" class="build" onclick="alert('예약이 불가능합니다ㅠ')">
+					<p>나는 So-So</p>
+					<p>한줄평 : 백종원이 추천했지만 그정도는...</p>
+				
+
+				</section>
+			</aside>
+			<aside>
+				<section class="map">
+					<h2>지도</h2>
+					
+					<img src="텐동요츠야지도.jpg" width="400" height="300">
+					<a href="https://map.naver.com/v5/search/%ED%85%90%EB%8F%99%EC%9A%94%EC%B8%A0%EC%95%BC/place/38460514?c=14131577.4657637,4506084.6389250,14,0,0,0,dh"><input type="button" value="위치(상세정보)"></a>
+					<a href="https://www.mangoplate.com/restaurants/A5O1smA6kZGW" onclick="return query()"><img src="리뷰.jpg"  class="align-right"></a>
+					<img src="예약.jpg" class="build" onclick="alert('예약이 불가능합니다ㅠ')">
+					<p>나는 Great ^-^</p>
+					<p>한줄평 : 스페셜은 전복 추가 / 내가 텐동을 좋아함</p>
+					
+
+				</section>
+			</aside>
+			
+			<footer>
+				<a href="메인.html"><input type="button" value="메인페이지로 이동"></a>
+			</footer>
+
+	</div>
+
+
+</body>
+
+</html>

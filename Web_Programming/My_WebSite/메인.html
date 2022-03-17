@@ -1,0 +1,198 @@
+<!Doctype html>
+<html>
+<head>
+	<title>나만의 음식점</title><!--css사용-->
+	<style type="text/css">
+		
+	body { 
+		width: 960px;
+		margin: 0 auto;
+		background : #F5F6CE;
+	}
+
+	div div{
+		display: inline-block;
+		border: 2px dotted orangered;
+		background: powderblue;
+		margin: 30px;
+		width: 520px; height: 300px;
+	}
+
+	blockquote {
+		float: right;
+		width: 300px;
+		font-size: 100%;
+		font-family: 'Roboto Slab', serif;
+		background:#E0ECF8;
+		margin: 5px 5px 0px 0px;
+		padding: 10px;
+		border top: 3px solid black;
+		border bottom: 3px solid black;
+	}
+
+	ul{
+		width: 900px;
+		padding: 20px;
+		margin: 10px auto 10px auto;
+		border-top: 2px solid black;
+		border-bottom: 1px solid black;
+		text-align: center;
+	}
+
+	li{
+		display: inline; margin: 0px 10px;
+	}
+
+
+	a{
+		color: black;
+		text-decoration: none;
+
+	}
+
+	a:hover{
+		color: pink;
+	}
+	
+	h1 {
+		color: #82FA58;
+		background-image: url("구름.jpg");
+		background-repeat: repeat-x;
+		text-align: center;
+		
+	}
+	h2{font-family: 'Galindo', cursive;}
+
+	p { text-align: center; }
+
+	img.align-left {
+		float: left;
+		margin right: 10px;
+	}
+	
+	img.align-right {
+		float: right;
+		margin left: 10px;
+	}
+
+	</style>
+
+	<script>
+		function changelmg1(){
+			document.getElementById("img").src="지린성짜장면.jpg";
+			document.getElementById("test").value = '지린성고추짜장';
+		}
+
+		function changelmg2(){
+			document.getElementById("img").src="양푼왕갈비감자탕.jpg";
+			document.getElementById("test").value = '양푼왕갈비감자탕';
+		}
+
+		function changelmg3(){
+			document.getElementById("img").src="아빠곰수제돈까스.jpg";
+			document.getElementById("test").value = '아빠곰수제돈까스';
+		}
+
+		function changelmg4(){
+			document.getElementById("img").src="텐동요츠야스페셜.jpg";
+			document.getElementById("test").value = '텐동요츠야스페셜';
+		}
+
+		function changelmg5(){
+			document.getElementById("img").src="빽다방크로칸슈.jpg";
+			document.getElementById("test").value = '빽다방크로칸슈';
+			
+		}
+
+	
+
+	</script><!--스크립트태그사용 -->
+
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@600&display=swap" rel="stylesheet">
+
+	<link href="https://fonts.googleapis.com/css2?family=Galindo&display=swap" rel="stylesheet"><!--google font사용-->
+
+<body>
+	<h1 class="div1">hyeonmin of restaurant</h1> <!--div을 적용하여 제목작성-->
+
+	
+
+	<div style="background: orange">  
+		<div>
+			<table> <!--table을 이용하여 카테고리 박스 구성-->
+				<caption><h2>Category</h2></caption> 
+				<thead>
+					<tr>
+						<th><a href="중식.html"><input type="button" value="중식"></a></th><!--버튼타입으로 구성, 페이지 이동 링크사용-->
+						<th><a href="한식.html"><input type="button" value="한식"></th>
+						<th><a href="양식.html"><input type="button" value="양식"></th>
+						<th><a href="일식.html"><input type="button" value="일식"></a></th>
+						<th><a href="디저트.html"><input type="button" value="디저트"></th>
+					</tr>
+				</thead>
+				<tfoot>
+					<tr>
+						<th>짜장면</th>
+						<th>감자탕</th>
+						<th>돈까스</th>
+						<th>라면</th>
+						<th>빵</th>
+					</tr>
+				</tfoot>
+				<tbody>
+					<td><img src="목란짜장면.jpg" width="100" height="100"></td><!--이지미사용-->
+					<td><img src="양푼왕갈비감자탕.jpg" width="100" height="100"></td>
+					<td><img src="448돈까스.jpg" width="100" height="100"></td>
+					<td><img src="가야가야돈코츠.jpg" width="100" height="100"></td>
+					<td><img src="빽다방크로칸슈.jpg" width="100" height="100"></td>
+				</tbody>
+			</table>
+		</div>
+	
+	<blockquote><!--시맨틱 블록구성-->
+		
+			<h2>Want to go </h2>
+			<p>
+			<img src="연돈.jpg" width="180" height="130" class="align-left" >
+			<a href="https://www.youtube.com/watch?v=Ik92vdt8n0Y"><h2>연돈</h2></a>제주특별자치도 서귀포시 일주서로 968-10
+			</p><!--유튜로 링크-->
+			
+			<p>
+			<img src="온센텐동.jpg" width="180" height="130" class="align-left">
+			<a href="https://www.youtube.com/watch?v=PXVQi2FqumM"><h2>온센텐동</h2></a>인천 중구 신포로35번길 22
+			</p>
+			
+	</blockquote>
+
+
+	</div>	
+
+
+	
+	<div>
+	<h1>My recommended restaurant</h1>
+	
+		<ul id="navigation" ><!--id속성사용-->
+			<li><button onclick="changelmg1()">중식</button></li>
+			<li><button onclick="changelmg2()">한식</button></li>
+			<li><button onclick="changelmg3()">양식</button></li>
+			<li><button onclick="changelmg4()">일식</button></li>
+			<li><button onclick="changelmg5()">디저트</button></li><!--스크립트함수사용-->
+		</ul>
+		<p>
+			<img  id="img" src="목란동파육.jpg" width="600" height="600" >
+			<input type="button" id="test" value="목란동파육">
+		</p>
+		
+	</div>
+
+	
+	<hr>
+	<h1>Email : gusals1997@naver.com Tel : 010-7455-0463</h1>
+
+
+	
+	
+</body>
+
+</html>

@@ -1,0 +1,230 @@
+<!Doctype html>
+<html>
+<head>
+	<title>한식</title>
+	<style>
+		
+		body {
+			background : #A9F5D0;
+		}
+
+		
+		h1{
+			text-align: center;
+			color:black;
+		}
+		
+		h2{
+			margin: 10px 10px 10px 20px;
+		}	
+
+		a{
+			color: black;
+			text-decoration: none;
+
+		}
+
+		a:hover{
+			color: pink;
+		}
+
+		section.courses{
+			float: left;
+			width: 500px;
+			border-right: 1px solid #eeeeee;
+		}
+
+		section.map{
+			float: right;
+			width: 400px;
+			
+		}
+
+		article{
+			clear: both;
+			overflow: auto;
+			width: 80%;
+
+		}
+
+		figure{
+			float: left;
+			width: 330px;
+			height: 155px;
+			padding: 5px;
+			margin: 20px;
+			border: 1px solid #eeeeee;
+		} 
+
+		figcaption{
+			font-size: 90%;
+			text-align: left;
+		}
+
+		aside{
+			width: 500px;
+			height: 683px;
+			float: left;
+			padding: 
+		}
+
+		aside section a{
+			display: block;
+			padding: 10px;
+			border-bottom: 1px solid #eeeeee;
+		}
+
+		.wrapper{
+			width: 1050px;
+			margin: 20px auto 20px auto;
+			border:2px solid #000000;
+			background-color: #ffffff;
+		}
+
+		footer{
+			text-align: right;
+		}
+
+		.build{
+			padding: 10px;
+		}
+
+		.color1{
+			background: #F3F781;
+		}
+
+
+
+	</style>
+
+	<script>
+		function query() {
+			var ret = confirm("리뷰사이트로 이동하시겠습니까?");
+			return ret; 
+		}
+		
+		function noAction(e) {
+			e.preventDefault(); 
+		}
+	</script>
+
+	<link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+
+<body>
+	
+
+	<div class="wrapper">
+		<header class="color1">
+			<h1 style="font-family: 'Shadows Into Light', cursive;">Korean restaurant</h1><hr>
+		</header>
+
+		<section class="courses">
+			<h2>양푼왕갈비감자탕</h2>
+			<article>
+				<figure>
+			
+					<img src="양푼왕갈비감자탕.jpg" width="150" height="150">
+					<figcation>양푼왕갈비(돼지)11,000</figcation>
+				</figure>		
+				<figure>
+					<img src="양푼왕갈비감자탕밑반찬.jpg" width="150" height="150">
+					<figcation>밑반찬(족발, 닭발 등등)</figcation>
+				
+				</figure>
+			
+
+				<figure>
+					<img src="양푼왕갈비감자탕볶음밥.jpg" width="150" height="150">
+					<figcation>밥몪음(볶음밥) 2,000</figcation>
+				</figure>
+			</article><hr>
+
+			<h2>한입소반</h2>
+			<article>
+				<figure>
+					<img src="한입소반묵은지.jpg" width="150" height="150">
+					<figcation>묵은지참치 4,000</figcation>
+				</figure>
+				<figure>
+					<img src="한입소반제육.jpg" width="150" height="150">
+					<figcation>직화제육 4,000</figcation>
+				</figure>
+				<figure>
+					<img src="한입소반멸추.jpg" width="150" height="150">
+					<figcation>매콤멸추 4,000</figcation>
+				</figure>
+			</article><hr>
+
+			<h2>신림백순대</h2>
+			<article>
+				<figure>
+					<img src="신림백순대.jpg" width="150" height="150">
+					<figcation>백순대(2인분) 16,000</figcation>
+				</figure>
+				<figure>
+					<img src="신림백순대볶음밥.jpg" width="150" height="150">
+					<figcation>볶음밥 2,000</figcation>
+				</figure>
+				<figure>
+					<img src="신림백순대양념.jpg" width="150" height="150">
+					<figcation>순대곱창(2인분) 16,000</figcation>
+				</figure>
+			</article><hr>
+		
+		</section>
+			
+			<aside>
+				<section class="map">
+					<h2>지도</h2>
+
+					<img src="양푼지도.jpg" width="400" height="300">
+					<a href="https://map.naver.com/v5/search/%EC%96%91%ED%91%BC%EC%99%95%EA%B0%88%EB%B9%84%EA%B0%90%EC%9E%90%ED%83%95%EB%82%98%EB%9D%BC/place/17197338?c=14102321.1931876,4295357.3065713,14,0,0,0,dh"><input type="button" value="위치(상세정보)"></a>
+					
+					<a href="https://www.youtube.com/watch?v=OPjs5P-U6Kc" onclick="return query()"><img src="리뷰.jpg"  class="align-right"></a>
+					<img src="예약.jpg" class="build" onclick="alert('예약이 불가능합니다ㅠ')">
+					<p>나는 Great ^-^</p>
+					<p>한줄평 : 밑반찬도 맛있고 감자탕도 맛있음 </p>
+					
+				
+
+				</section>
+			</aside>
+			<aside>
+				<section class="map">
+					<h2>지도</h2>
+					
+					<img src="한입소반지도.jpg" width="400" height="300">
+					<a href="https://map.naver.com/v5/search/%ED%95%9C%EC%9E%85%EC%86%8C%EB%B0%98/place/34556586?c=14133345.0720428,4515237.9730621,14,0,0,0,dh"><input type="button" value="위치(상세정보)"></a>
+					<a href="https://www.mangoplate.com/restaurants/C1EUU9PoZuIN" onclick="return query()"><img src="리뷰.jpg"  class="align-right"></a>
+					<img src="예약.jpg" class="build" onclick="alert('예약이 불가능합니다ㅠ')">
+					<p>나는 So-So</p>
+					<p>한줄평 : 맛있지만 한입에 먹기 너무 큼 </p>
+					
+				</section>
+			</aside>
+			
+			<aside>
+				<section class="map">
+					<h2>지도</h2>
+					
+					<img src="신림백순대지도.jpg" width="400" height="300">
+					<a href="https://map.naver.com/v5/search/%EC%8B%A0%EB%A6%BC%EB%B0%B1%EC%88%9C%EB%8C%80?c=14129655.0446441,4506676.5780210,18,0,0,0,dh"><input type="button" value="위치(상세정보)"></a>
+					<a href="https://www.youtube.com/watch?v=LzlYnBIuWtU" onclick="return query()"><img src="리뷰.jpg"  class="align-right"></a>
+					<img src="예약.jpg" class="build" onclick="alert('예약이 불가능합니다ㅠ')">
+					<p>나는 Great ^-^</p>
+					<p>한줄평 : 안 먹어봤으면 가장 추천! </p>
+					
+
+				</section>
+			</aside>
+			
+			<footer>
+				<a href="메인.html"><input type="button" value="메인페이지로 이동"></a>
+			</footer>
+
+	</div>
+
+
+</body>
+
+</html>
